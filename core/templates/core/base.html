@@ -44,8 +44,8 @@
             </li>
           </ul>
 <!--            <div class="d-flex gap-2 justify-content-center py-5">-->
-              <button class="btn btn-secondary rounded-pill px-3" type="button">Sign Up</button>
-              <button class="btn btn-light rounded-pill px-3" type="button">Log in</button>
+              <a href="{% url 'core:signup' %}"><button class="btn btn-secondary rounded-pill px-3" type="button">Sign Up</button></a>
+              <a href="{% url 'core:login' %}"><button class="btn btn-light rounded-pill px-3" type="button">Log in</button></a>
 <!--            </div>-->
         </div>
       </div>
@@ -67,7 +67,7 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link px-2 text-body-secondary">Contact</a></li>
+          <li class="nav-item"><a href="{% url 'core:contact' %}" class="nav-link px-2 text-body-secondary">Contact</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
