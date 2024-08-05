@@ -24,10 +24,20 @@
                         <p style="font-size: 2rem ;" class="p-2 card-text"><strong> Description: </strong> <small>
                                 {{item.description}} </small></p>
                     {% endif %}
+                    {% if request.user == item.created_by %}
+                        <p style="font-size: 2rem ;" class="text-primary p-2 card-text red"><strong> Made by you! </strong></p>
+                        <button type="button" class="mt-4 mr-2 btn btn-primary btn-lg">
+                            <a href="#" class="">Edit</a>
+                        </button>
+
+                        <button type="button" class="mt-4 ml-2 btn btn-danger btn-lg">
+                            <a href="{% url 'item:delete' item.id %}" class="">Delete</a>
+                        </button>
+                    {% else %}
                     <button type="button" class="m-4 btn btn-secondary btn-lg">
                         <a href="#" class="">Contact Seller</a>
                     </button>
-
+                    {% endif %}
                 </div>
                 </div>
             </div>
