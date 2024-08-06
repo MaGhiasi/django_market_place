@@ -27,7 +27,7 @@
                     {% if request.user == item.created_by %}
                         <p style="font-size: 2rem ;" class="text-primary p-2 card-text red"><strong> Made by you! </strong></p>
                         <button type="button" class="mt-4 mr-2 btn btn-primary btn-lg">
-                            <a href="#" class="">Edit</a>
+                            <a href="{% url 'item:edit' item.id %}" class="">Edit</a>
                         </button>
 
                         <button type="button" class="mt-4 ml-2 btn btn-danger btn-lg">

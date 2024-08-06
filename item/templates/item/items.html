@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Browse
+{% endblock %}
+
+{% block content %}
+<!--    <section>-->
+        <div class="container-fluid p-5">
+            <div class="row mb-1">
+                <div class="col-3 bg-light px-1">
+              <!-- Content for the first column -->
+                    <h1> Sidebar</h1>
+                </div>
+                <div class="col-9 bg-light">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    {% for item in items %}
+                        <div class="card p-3" >
+                            <!--     goes to item details page      -->
+                            <a href="{% url 'item:detail' item.id %}">
+                            <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="100px">
+                            <div class="card-body">
+                                <h2 class="card-title display-6">{{ item.name }}</h2>
+                            <p class="card-text">Price: {{ item.price }}</p>
+
+                            </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </section>-->
+
+{% endblock %}
