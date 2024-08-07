@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3003428-e3b6-47db-a33a-72b2a3b7d6ce" name="Changes" comment="add dashboard and advertise deletion">
-      <change afterPath="$PROJECT_DIR$/item/templates/item/items.html" afterDir="false" />
+    <list default="true" id="d3003428-e3b6-47db-a33a-72b2a3b7d6ce" name="Changes" comment="add editing option and template for browsing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/templates/item/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/templates/item/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/templates/item/items.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/templates/item/items.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722882959359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add editing option and template for browsing">
+      <option name="closed" value="true" />
+      <created>1722937326267</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722937326267</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,7 +153,8 @@
     <MESSAGE value="login completed" />
     <MESSAGE value="complete item form to add new item" />
     <MESSAGE value="add dashboard and advertise deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dashboard and advertise deletion" />
+    <MESSAGE value="add editing option and template for browsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add editing option and template for browsing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

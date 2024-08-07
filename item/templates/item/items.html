@@ -4,32 +4,62 @@
 {% endblock %}
 
 {% block content %}
-<!--    <section>-->
-        <div class="container-fluid p-5">
-            <div class="row mb-1">
-                <div class="col-3 bg-light px-1">
-              <!-- Content for the first column -->
-                    <h1> Sidebar</h1>
-                </div>
-                <div class="col-9 bg-light">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    {% for item in items %}
-                        <div class="card p-3" >
-                            <!--     goes to item details page      -->
-                            <a href="{% url 'item:detail' item.id %}">
-                            <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="100px">
-                            <div class="card-body">
-                                <h2 class="card-title display-6">{{ item.name }}</h2>
-                            <p class="card-text">Price: {{ item.price }}</p>
 
-                            </div>
-                            </a>
-                        </div>
-                    {% endfor %}
-                    </div>
+<div class="container-fluid p-5">
+    <div class="row mb-1">
+        <div class="col-3 bg-light px-1">
+            <h1 class="text-center display-2 font-weight-bold p-3">Sidebar</h1>
+            <form method="get" action="{% url 'item:items' %}">
+                <div class="p-3">
+                <input type="text" name="query" value="{{query}}" class="form-control"
+                       placeholder="Find by title or description...">
                 </div>
+
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button value="Submit" type="submit" class="btn btn-success btn-lg mt-3">Search</button>
+                </div>
+            </form>
+            <div class="text-center">
+                <h1 class="display-5 font-weight-bold p-1">Categories:</h1>
+                <ul class="list-unstyled">
+                    {% for category in categories %}
+                        <li class="mb-2 font-weight-bold {% if category.id == category_id %} text-secondary {% endif %} ">
+                            <a href="{% url 'item:items' %}?query={{ query }}&category={{ category.id }}" class="text-decoration-none font-weight-bold">
+                                <p class="display-6 p-1">{{ category.name }} </p>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-5">
+                    <button type="submit" class="btn-lg btn btn-outline-warning">
+                        <a href="{% url 'item:items' %}">
+                                Clear Filters
+                        </a>
+                    </button>
+                </div>
+
             </div>
         </div>
-<!--    </section>-->
+        <div class="col-9 bg-light">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for item in items %}
+                <div class="card p-3" >
+
+                    <a href="{% url 'item:detail' item.id %}">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="100px">
+                    <div class="card-body">
+                        <h2 class="card-title display-6">{{ item.name }}</h2>
+                    <p class="card-text">Price: {{ item.price }}</p>
+
+                    </div>
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
