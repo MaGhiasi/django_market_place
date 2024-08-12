@@ -35,7 +35,7 @@
                         </button>
                     {% else %}
                     <button type="button" class="m-4 btn btn-secondary btn-lg">
-                        <a href="#" class="">Contact Seller</a>
+                        <a href="{% url 'conversation:new' item.id %}" class="">Contact Seller</a>
                     </button>
                     {% endif %}
                 </div>
