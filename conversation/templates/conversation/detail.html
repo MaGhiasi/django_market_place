@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Conversation{% endblock %}
+
+{% block content %}
+<section>
+<div class="container-fluid">
+    <h1 class="mb-4 display-4">Conversation</h1>
+
+    <div class="space-y-3">
+        {% for message in conversation.messages.all %}
+
+        {% endfor %}
+    </div>
+</div>
+</section>
+{% endblock %}
