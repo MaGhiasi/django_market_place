@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Inbox
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Inbox</p>
+    {% for conversation in conversations %}
+        <a href="#">
+            <div>
+                <img src="{{ conversation.item.image.url }}">
+            </div>
+        </a>
+    {% endfor %}
+</section>
+
+
+{% endblock %}
