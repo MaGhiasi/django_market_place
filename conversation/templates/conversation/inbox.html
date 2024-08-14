@@ -5,12 +5,12 @@
 {% block content %}
 <section>
 <div class="container-fluid">
-    <h1 class="mb-4 display-4">Inbox</h1>
+    <h1 class="m-5 h1">Inbox</h1>
 
-    <div class="space-y-3">
+    <div class="space-y-3 m-4">
         {% for conversation in conversations %}
-            <a href="#" class="text-decoration-none">
-                <div class="p-3 d-flex bg-light rounded-3">
+            <a href="{% url 'conversation:detail' conversation.id %}" class="text-decoration-none">
+                <div class="p-3 d-flex bg-light rounded-3 m-4">
                     <div class="pr-3">
                         <img src="{{ conversation.item.image.url }}" class="img-fluid rounded-3" style="width: 5rem;">
                     </div>
